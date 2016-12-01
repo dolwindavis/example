@@ -19,7 +19,7 @@
 				
 			<form method="POST" action="/cards/{{$card->id}}/notes">
 				{{ csrf_field() }}	
-				
+				<input type="hidden" name="user_id" value="1">
 				<div class="form-group">
 					<textarea name="body" class="form-control"></textarea>
 				</div>

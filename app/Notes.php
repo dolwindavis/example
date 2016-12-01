@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Notes extends Model
 {
-	protected $fillable=['body'];
+	protected $fillable=['body','user_id'];
     public function card()
     {
     	return $this->belongsTo(Card::class);

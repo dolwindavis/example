@@ -10,11 +10,13 @@ class NotesController extends Controller
     public function store(Request $request,Card $card)
     {
     	
-    	$note=new Notes;
-        $note->user_id=1;
+    	
+        
     	// $note->body=$request->body;
     	// $card->notes()->save($note);
-        $card->addNote($note);
+        $card->addNote(
+            new Notes($request->all())
+            );
                 
 
     	return back();
