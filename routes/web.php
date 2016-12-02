@@ -10,7 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('begin',function(){
+	// Session()->flash('flash_message','loggged in');
+	// Session()->flash('flash_message_level','info');
+	flash('you are now loggged in','error');
+	return redirect('/');
+});
 Route::get('/', function () {
     return view('welcome');
 });
